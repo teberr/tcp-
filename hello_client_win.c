@@ -31,12 +31,12 @@ int main(int argc, char* argv[]) {
 	if (connect(hSocket, (SOCKADDR*)&servAddr, sizeof(servAddr) == SOCKET_ERROR))
 		ErrorHandling("connect() error");
 
-	strLen = recv(hSocket, message, sizeof(message) - 1, 0); // ¼­¹ö·ÎºÎÅÍ Àü¼ÛµÇ´Â µ¥ÀÌÅÍ ¼ö½Å
+	strLen = recv(hSocket, message, sizeof(message) - 1, 0); // ì„œë²„ë¡œë¶€í„° ì „ì†¡ë˜ëŠ” ë°ì´í„° ìˆ˜ì‹ 
 	if (strLen == -1)
 		ErrorHandling("read() error");
 	printf("Message from server: %s \n", message);
 	closesocket(hSocket);
-	WSACleanup(); //¼ÒÄÏ ¶óÀÌºê·¯¸® ÇØÁ¦
+	WSACleanup(); //ì†Œì¼“ ë¼ì´ë¸ŒëŸ¬ë¦¬ í•´ì œ
 	return 0;
 
 }
