@@ -1,4 +1,4 @@
-#define _WINSOCK_DEPRECATED_NO_WARINGS
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
